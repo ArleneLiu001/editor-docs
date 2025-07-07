@@ -4,7 +4,7 @@ export const routes = Object.fromEntries([
   ["/get-started.html", { loader: () => import(/* webpackChunkName: "get-started.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/get-started.html.js"), meta: {"title":"Get Started"} }],
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"首页"} }],
   ["/blog/chaper1.html", { loader: () => import(/* webpackChunkName: "blog_chaper1.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper1.html.js"), meta: {"title":"编辑器功能扩展需求"} }],
-  ["/blog/chaper10.html", { loader: () => import(/* webpackChunkName: "blog_chaper10.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper10.html.js"), meta: {"title":""} }],
+  ["/blog/chaper10.html", { loader: () => import(/* webpackChunkName: "blog_chaper10.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper10.html.js"), meta: {"title":"右键菜单组件"} }],
   ["/blog/chaper2.html", { loader: () => import(/* webpackChunkName: "blog_chaper2.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper2.html.js"), meta: {"title":"WPSweboffice基础功能罗列参考"} }],
   ["/blog/chaper3.html", { loader: () => import(/* webpackChunkName: "blog_chaper3.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper3.html.js"), meta: {"title":"导入文档功能"} }],
   ["/blog/chaper4.html", { loader: () => import(/* webpackChunkName: "blog_chaper4.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper4.html.js"), meta: {"title":"页面缩放功能"} }],
@@ -12,7 +12,7 @@ export const routes = Object.fromEntries([
   ["/blog/chaper6.html", { loader: () => import(/* webpackChunkName: "blog_chaper6.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper6.html.js"), meta: {"title":"工具栏图片上传并裁剪功能实现分析"} }],
   ["/blog/chaper7.html", { loader: () => import(/* webpackChunkName: "blog_chaper7.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper7.html.js"), meta: {"title":"字数统计功能"} }],
   ["/blog/chaper8.html", { loader: () => import(/* webpackChunkName: "blog_chaper8.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper8.html.js"), meta: {"title":"自定义控件实现思路"} }],
-  ["/blog/chaper9.html", { loader: () => import(/* webpackChunkName: "blog_chaper9.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper9.html.js"), meta: {"title":""} }],
+  ["/blog/chaper9.html", { loader: () => import(/* webpackChunkName: "blog_chaper9.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper9.html.js"), meta: {"title":"可配置控件组件"} }],
   ["/posts/archive1.html", { loader: () => import(/* webpackChunkName: "posts_archive1.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/posts/archive1.html.js"), meta: {"_blog":{"title":"Archive Article1","author":"","date":"1998-01-01T00:00:00.000Z","category":["History"],"tag":["WWI"],"excerpt":"\n<h2>Heading 2</h2>\n<p>Here is the content.</p>\n<h3>Heading 3</h3>\n<p>Here is the content.</p>\n"},"title":"Archive Article1"} }],
   ["/posts/archive2.html", { loader: () => import(/* webpackChunkName: "posts_archive2.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/posts/archive2.html.js"), meta: {"_blog":{"title":"Archive Article2","author":"","date":"1998-01-02T00:00:00.000Z","category":["History"],"tag":["WWII"],"excerpt":"\n<h2>Heading 2</h2>\n<p>Here is the content.</p>\n<h3>Heading 3</h3>\n<p>Here is the content.</p>\n"},"title":"Archive Article2"} }],
   ["/posts/article1.html", { loader: () => import(/* webpackChunkName: "posts_article1.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/posts/article1.html.js"), meta: {"_blog":{"title":"Article 1","author":"","date":"2022-01-01T00:00:00.000Z","category":["Category A"],"tag":["tag A","tag B"],"excerpt":"\n<h2>Heading 2</h2>\n<p>Here is the content.</p>\n<h3>Heading 3</h3>\n<p>Here is the content.</p>\n"},"title":"Article 1"} }],
@@ -33,20 +33,3 @@ export const routes = Object.fromEntries([
   ["/blog/content/chaper2.html", { loader: () => import(/* webpackChunkName: "blog_content_chaper2.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/content/chaper2.html.js"), meta: {"title":"右键菜单组件"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-  }
-  if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  })
-}

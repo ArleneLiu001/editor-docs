@@ -5,7 +5,7 @@ title: 首页
 actions:
   - text: 开始使用
     # link: /article/
-    link: /blog/chaper2
+    link: /blog/chaper1
     type: primary
 
   # - text: Introduction

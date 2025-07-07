@@ -7,10 +7,9 @@ function getblogSidebar() {
   return [
     {
       title: '基础',
-      collapsable: true,
+      collapsable: false,
       children: [
         'chaper1',
-        'chaper2',
         'chaper3',
         'chaper4',
         'chaper5',
@@ -21,14 +20,14 @@ function getblogSidebar() {
         'chaper10',
       ]
     },
-    {
-      title: '基础',
-      collapsable: false,
-      children: [
-        'content/chaper1',
-        'content/chaper2',
-      ]
-    },
+    // {
+    //   title: '基础',
+    //   collapsable: false,
+    //   children: [
+    //     'content/chaper1',
+    //     'content/chaper2',
+    //   ]
+    // },
   ]
 }
 

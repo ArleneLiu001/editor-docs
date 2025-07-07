@@ -107,7 +107,7 @@
 <span class="line">  <span class="token literal-property property">menuOptions</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">/* 配置选项 */</span> <span class="token punctuation">}</span></span>
 <span class="line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="特色功能" tabindex="-1"><a class="header-anchor" href="#特色功能"><span>特色功能</span></a></h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="特色功能" tabindex="-1"><a class="header-anchor" href="#特色功能"><span>特色功能</span></a></h4>
 <ol>
 <li><strong>智能插入定位</strong>：使用浏览器原生API实现精确的拖拽插入位置</li>
 <li><strong>实时编辑控件</strong>：文本控件支持原地编辑，无需弹窗</li>
@@ -116,6 +116,36 @@
 <li><strong>插件化架构</strong>：高度可扩展的插件系统</li>
 </ol>
 <p>这个页面展现了现代Web应用的完整技术栈，结合了富文本编辑、文件处理、图像处理、AI集成等多个技术领域，是一个功能完善的文档编辑解决方案。</p>
+<h3 id="wpsweboffice基础功能罗列参考" tabindex="-1"><a class="header-anchor" href="#wpsweboffice基础功能罗列参考"><span>WPSweboffice基础功能罗列参考</span></a></h3>
+<p>支持在线创建、编辑提供与本地WPS Office高度相似的编辑界面和基础功能（字体、段落、样式、公式、图表、图片插入、基本动画等）。</p>
+<ol>
+<li>文档侧边栏（最多四层）
+是否开启目录功能，默认开启
+打开文档时，默认以最佳比例显示</li>
+<li>查询文本位置和进行文本替换</li>
+<li>粘贴带格式的html数据到指定的区域。</li>
+<li>搜索的时候，搜索的文字高亮实现。</li>
+<li>文档内容提取和批量填充：文档合并，插入等
+思考？（能不能使用wangeditor也封装一个方法，直接可以插入）</li>
+<li>开启了限制编辑模式，打开模板文档后，我们发现除了内容控件可以编辑外，其它地方的内容都变为了只读。</li>
+<li>在光标处插入内容控件（可不可以一行代码，在光标处插入内容控件。</li>
+</ol>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre v-pre><code><span class="line">例如封装一个add方法，</span>
+<span class="line"> const app = instance.Application</span>
+<span class="line"></span>
+<span class="line">  // 内容控件对象</span>
+<span class="line">  const contentControls = await app.ActiveDocument.ContentControls</span>
+<span class="line"></span>
+<span class="line">  // 在光标处插入内容控件</span>
+<span class="line">  await contentControls.Add()</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="8">
+<li>超链接跳转。</li>
+<li>评论。</li>
+<li>统计单词数量。</li>
+<li>缩放。</li>
+<li>目录。</li>
+</ol>
 <!-- ### 具体实现研究
  #### 功能1  
    ~~导入文档自动按照格式解析。支持格式为word,pdf,excel.图片（是否需要）~~ 到时候根据后端会根据文档，将文档转为富文本格式，pdf转为word，传给前端渲染即可。
