@@ -1,0 +1,14 @@
+export const siteData = JSON.parse("{\"base\":\"/editor-docs/\",\"lang\":\"en-US\",\"title\":\"wangEditor富文本编辑器功能扩展\",\"description\":\"在开源文本编辑器wangEditor的基础上，实现一个富文本编辑器扩展插件，用于在线文档的定制化编辑。\",\"head\":[],\"locales\":{}}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSiteData) {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ siteData }) => {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  })
+}

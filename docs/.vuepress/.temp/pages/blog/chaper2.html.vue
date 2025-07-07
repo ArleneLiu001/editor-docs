@@ -1,0 +1,49 @@
+<template><div><h1 id="wpsweboffice基础功能罗列参考" tabindex="-1"><a class="header-anchor" href="#wpsweboffice基础功能罗列参考"><span>WPSweboffice基础功能罗列参考</span></a></h1>
+<p>支持在线创建、编辑提供与本地WPS Office高度相似的编辑界面和基础功能（字体、段落、样式、公式、图表、图片插入、基本动画等）。</p>
+<ol>
+<li>
+<p>文档侧边栏（最多四层）
+是否开启目录功能，默认开启
+打开文档时，默认以最佳比例显示</p>
+</li>
+<li>
+<p>查询文本位置和进行文本替换</p>
+</li>
+<li>
+<p>粘贴带格式的html数据到指定的区域。
+<code v-pre>（在wps weboffice中， 首先获取选中区域，再使用PasteHtml就能实现。）</code>
+思考？在自己的组件库能不能封装下此功能。</p>
+</li>
+<li>
+<p>搜索的时候，搜索的文字高亮实现。</p>
+</li>
+<li>
+<p>文档内容提取和批量填充：文档合并，插入等
+思考？（能不能使用wangeditor也封装一个方法，直接可以插入）</p>
+</li>
+<li>
+<p>开启了限制编辑模式，打开模板文档后，我们发现除了内容控件可以编辑外，其它地方的内容都变为了只读。</p>
+</li>
+<li>
+<p>在光标处插入内容控件（可不可以一行代码，在光标处插入内容控件。</p>
+</li>
+</ol>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre v-pre><code><span class="line">例如封装一个add方法，</span>
+<span class="line"> const app = instance.Application</span>
+<span class="line"></span>
+<span class="line">  // 内容控件对象</span>
+<span class="line">  const contentControls = await app.ActiveDocument.ContentControls</span>
+<span class="line"></span>
+<span class="line">  // 在光标处插入内容控件</span>
+<span class="line">  await contentControls.Add()</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="8">
+<li>超链接跳转。</li>
+<li>评论。</li>
+<li>统计单词数量。</li>
+<li>缩放。</li>
+<li>目录。</li>
+</ol>
+</div></template>
+
+
