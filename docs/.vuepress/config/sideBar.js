@@ -18,6 +18,11 @@ function getblogSidebar() {
         'chaper8',
         'chaper9',
         'chaper10',
+        'chaper11',
+        'chaper12',
+        'chaper13',
+        'chaper14',
+        'chaper15',
       ]
     },
     // {

@@ -5,6 +5,10 @@ export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"首页"} }],
   ["/blog/chaper1.html", { loader: () => import(/* webpackChunkName: "blog_chaper1.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper1.html.js"), meta: {"title":"编辑器功能扩展需求"} }],
   ["/blog/chaper10.html", { loader: () => import(/* webpackChunkName: "blog_chaper10.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper10.html.js"), meta: {"title":"右键菜单组件"} }],
+  ["/blog/chaper11.html", { loader: () => import(/* webpackChunkName: "blog_chaper11.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper11.html.js"), meta: {"title":"文档导出核心功能"} }],
+  ["/blog/chaper12.html", { loader: () => import(/* webpackChunkName: "blog_chaper12.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper12.html.js"), meta: {"title":"锚点实现思路与方法文档"} }],
+  ["/blog/chaper13.html", { loader: () => import(/* webpackChunkName: "blog_chaper13.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper13.html.js"), meta: {"title":"编辑器扩展与极一核心功能点分析"} }],
+  ["/blog/chaper14.html", { loader: () => import(/* webpackChunkName: "blog_chaper14.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper14.html.js"), meta: {"title":"WordCounter 字数统计功能"} }],
   ["/blog/chaper2.html", { loader: () => import(/* webpackChunkName: "blog_chaper2.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper2.html.js"), meta: {"title":"WPSweboffice基础功能罗列参考"} }],
   ["/blog/chaper3.html", { loader: () => import(/* webpackChunkName: "blog_chaper3.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper3.html.js"), meta: {"title":"导入文档功能"} }],
   ["/blog/chaper4.html", { loader: () => import(/* webpackChunkName: "blog_chaper4.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper4.html.js"), meta: {"title":"页面缩放功能"} }],
@@ -33,3 +37,20 @@ export const routes = Object.fromEntries([
   ["/blog/content/chaper2.html", { loader: () => import(/* webpackChunkName: "blog_content_chaper2.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/content/chaper2.html.js"), meta: {"title":"右键菜单组件"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"C:/yingao/editor-docs/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

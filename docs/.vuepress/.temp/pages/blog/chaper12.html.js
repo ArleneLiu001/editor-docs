@@ -1,0 +1,16 @@
+import comp from "C:/yingao/editor-docs/docs/.vuepress/.temp/pages/blog/chaper12.html.vue"
+const data = JSON.parse("{\"path\":\"/blog/chaper12.html\",\"title\":\"锚点实现思路与方法文档\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[{\"level\":3,\"title\":\"页面概述\",\"slug\":\"页面概述\",\"link\":\"#页面概述\",\"children\":[]},{\"level\":3,\"title\":\"核心功能实现\",\"slug\":\"核心功能实现\",\"link\":\"#核心功能实现\",\"children\":[]}],\"git\":{},\"filePathRelative\":\"blog/chaper12.md\",\"excerpt\":\"\\n<h3>页面概述</h3>\\n<p>ContractAnchorDemo.vue 是一个合同编辑器示例页面，主要功能是允许用户创建、编辑和管理带有锚点的合同文档。锚点是指合同中需要填写的特定字段，如合同编号、甲方、乙方、签订日期等。该页面提供了一个直观的界面，让用户可以在合同中插入、定位、填写和管理这些锚点。</p>\\n<h3>核心功能实现</h3>\\n<h5>2.1 锚点数据结构</h5>\\n<p>锚点数据存储在 <code>anchorFields</code> 响应式数组中，每个锚点包含以下属性：</p>\\n<div class=\\\"language-javascript line-numbers-mode\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"js\\\"><pre><code><span class=\\\"line\\\"><span class=\\\"token punctuation\\\">{</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">id</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"唯一标识符\\\"</span><span class=\\\"token punctuation\\\">,</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">type</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"锚点类型（text、date、number、select等）\\\"</span><span class=\\\"token punctuation\\\">,</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">label</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"锚点标签（如'合同编号'）\\\"</span><span class=\\\"token punctuation\\\">,</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">value</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"锚点值\\\"</span><span class=\\\"token punctuation\\\">,</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">placeholder</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"占位符文本\\\"</span><span class=\\\"token punctuation\\\">,</span></span>\\n<span class=\\\"line\\\">  <span class=\\\"token literal-property property\\\">options</span><span class=\\\"token operator\\\">:</span> <span class=\\\"token string\\\">\\\"选择类型锚点的选项数组（仅select类型）\\\"</span></span>\\n<span class=\\\"line\\\"><span class=\\\"token punctuation\\\">}</span></span>\\n<span class=\\\"line\\\"></span></code></pre>\\n<div class=\\\"line-numbers\\\" aria-hidden=\\\"true\\\" style=\\\"counter-reset:line-number 0\\\"><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div></div></div>\"}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
